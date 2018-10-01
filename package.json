@@ -8,7 +8,8 @@
     "test": "jest && node dist/index.js rep map",
     "codeCoverage": "jest --silent --coverage",
     "lint": "node_modules/.bin/tslint --project tsconfig.json --force",
-    "build": "tsc"
+    "build": "tsc",
+    "prepublishOnly": "rm -rf lib && tsc"
   },
   "repository": {
     "type": "git",
