@@ -13,6 +13,6 @@ if (process.argv.length > 2 && process.argv[1].includes('json-placeholder-replac
 
     const replaceableFileContent = fs.readFileSync(process.argv[2]).toString();
     const replacedValue = replacer.replace(replaceableFileContent);
-    console.log(JSON.stringify(replacedValue, null, 4));
+    fs.writeFileSync(process.argv[2], JSON.stringify(replacedValue, null, 2));
     process.exitCode = 0;
 }
